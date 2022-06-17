@@ -1,7 +1,7 @@
+package tests;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -42,7 +42,7 @@ public class TestAlert {
 		String texto = alert.getText();
 		Assert.assertEquals("Confirm Simples", alert.getText());
 		alert.accept();
-		//driver.findElement(By.id("elementosForm:nome")).sendKeys(texto);
+		driver.findElement(By.id("elementosForm:nome")).sendKeys(texto);
 		Assert.assertEquals("Confirmado",alert.getText() );
 		alert.accept();
 		
@@ -58,7 +58,7 @@ public class TestAlert {
 		
 }
 	@Test
-	@Ignore
+	
 	public void DeveInteragircomPrompts(){
 		
 		driver.findElement(By.id("prompt")).click();

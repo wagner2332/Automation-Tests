@@ -1,4 +1,7 @@
+package tests;
 import org.openqa.selenium.WebDriver;
+
+import Framework.DSL;
 
 public class CampoTreinamentoPage {
 	

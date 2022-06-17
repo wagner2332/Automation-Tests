@@ -1,3 +1,5 @@
+package tests;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +18,7 @@ public class PrimeFaces {
 	
 	@After
 	public void finaliza() {
-		//driver.quit();
+		driver.quit();
 	}
 	@Test
 	public void testaPrimeFace() {

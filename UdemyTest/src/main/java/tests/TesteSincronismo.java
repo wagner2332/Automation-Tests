@@ -1,3 +1,4 @@
+package tests;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -25,7 +26,7 @@ public class TesteSincronismo {
 		driver.quit();
 	}
 	@Test
-	@Ignore
+	
 	public void deveUtilizarEsperaFixa() throws InterruptedException {
 		driver.findElement(By.id("buttonDelay")).click();
 		Thread.sleep(3000);
@@ -44,6 +45,7 @@ public class TesteSincronismo {
 	
 	public void deveUtilizarEsperaExplicita() throws InterruptedException {
 		driver.findElement(By.id("buttonDelay")).click();
+		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("novoCampo")));
 		driver.findElement(By.id("novoCampo")).sendKeys("test");
